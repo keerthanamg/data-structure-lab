@@ -1,0 +1,39 @@
+#include<stdio.h>
+int main()
+{
+int m,n,p,q,f,i,j;
+printf("Enter the value of m rows:",m);
+scanf("%d",&m);
+printf("Enter the value of n columns:",n);
+scanf("%d",&n);
+char a[m][n];
+for(i=0;i<m;i++)
+{
+for(j=0;j<n;j++)
+{
+printf("i,j : %d,%d",i,j);
+printf("\nEnter the value of each 2d array:",a[i][j]);
+scanf(" %c",&a[i][j]);
+}
+}
+printf("Enter number of time it repeats itself:",f);
+scanf("%d",&f);
+//move to next row (down)(efg)
+for(i=0;i<m;i++)
+{ //for printing it again in the next/new line (aabbcc-
+>aabbcc)
+for(p=0;p<f;p++)
+
+{ //move to next element ->bb
+for(j=0;j<n;j++)
+{ //print element to repeat itself (aa)
+for(q=0;q<f;q++)
+{
+printf("%c",a[i][j]);
+}
+}
+printf("\n");
+}
+}
+return 0;
+}
